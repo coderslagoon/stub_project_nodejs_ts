@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "transpile.watch",
+            "type": "shell",
+            "command": "nps build.transpile.watch",
+            "problemMatcher": [
+                "$tsc-watch"
+            ],
+            "isBackground": true
+        },
+        {
+            "label": "lint.watch",
+            "type": "shell",
+            "command": "nps build.lint.watch",
+            "problemMatcher": [
+                "$eslint-stylish"
+            ],
+            "isBackground": true
+        },
+        {
+            "label": "all.watch",
+            "dependsOn": [
+                "lint.watch",
+                "transpile.watch"
+            ],
+            "problemMatcher": [
+            ]
+        }
+    ]
+}

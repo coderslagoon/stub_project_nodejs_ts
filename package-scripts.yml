@@ -1,0 +1,14 @@
+scripts:
+  reset: "rm -rf ./build ./node_modules && npm install && nps build.transpile"
+  clean: "rm -rf ./build"
+
+  build:
+    default: " nps build.transpile && nps build.lint"
+
+    lint:
+      default: "eslint -c ./build/out/scripts/eslintrc.js --ext .ts src scripts"
+      watch: "onchange -v -i -d 5000 'src/**/*.ts' 'scripts/**/*.ts' -- nps build.lint"
+
+    transpile:
+      default: "tsc"
+      watch: "tsc --watch"

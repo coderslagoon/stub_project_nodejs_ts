@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "build/out",
+    "sourceMap": true,
+    "declaration": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "*": [ "*", "src/*", "scripts/*" ]
+    }
+  },
+  "include": [
+    "./src",
+    "./scripts"
+  ]
+}
