@@ -8,7 +8,7 @@
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "program": "${workspaceFolder}/build/out/src/stub_project_nodejs_ts/main.js"
+      "program": "${workspaceFolder}/build/out/main.js"
     }
   ]
 }

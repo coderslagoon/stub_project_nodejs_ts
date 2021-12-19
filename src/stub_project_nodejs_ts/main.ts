@@ -1,8 +1,17 @@
-import * as _ from "lodash";
-import * as fse from "fs-extra";
+
+import fse from "fs-extra";
+
+import _ from "lodash";
 
 async function main(): Promise<void> {
-    _.map(await fse.readdir("."), item => {
+    try {
+        await fse.access(".");
+        console.log("GOOD!");
+    } catch (err) {
+        console.error("this is unexpected !?!", (err as Error)?.message ?? err);
+    }
+    const items = await fse.readdir(".");
+    _.map(items, item => {
         console.info(item);
     });
 }
