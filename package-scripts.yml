@@ -6,7 +6,7 @@ scripts:
     default: " nps build.transpile && nps build.lint"
 
     lint:
-      default: "eslint -c ./eslintrc.cjs --ext .ts src"
+      default: "xo"
       watch: "onchange -v -i -d 5000 'src/**/*.ts' 'scripts/**/*.ts' -- nps build.lint"
 
     transpile:
